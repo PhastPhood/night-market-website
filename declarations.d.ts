@@ -1,0 +1,3 @@
+interface RequireImport {
+    default: any;
+}

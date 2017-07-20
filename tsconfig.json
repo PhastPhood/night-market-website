@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "outDir": "./public/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "ES5"
+  },
+  "files": [
+    "./declarations.d.ts",
+    "./node_modules/@types/webpack-env/index.d.ts",
+    "./src/index.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "scripts",
+    "typings/browser.d.ts",
+    "typings/browser",
+    "webpack"
+  ]
+}

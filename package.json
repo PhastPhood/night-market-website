@@ -26,6 +26,7 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "@types/react-router": "^4.0.14",
     "html-webpack-plugin": "^2.29.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

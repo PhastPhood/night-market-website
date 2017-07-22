@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.scss';
 
 const list = [
   {
@@ -18,11 +17,11 @@ const list = [
 export default class App extends React.Component<{}, {}> {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div>
+        <div>
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
+        <p>
           To get started, edit <code>src/App.tsx</code> and save to reload. Does this work?
         </p>
         {list.map((item) =>

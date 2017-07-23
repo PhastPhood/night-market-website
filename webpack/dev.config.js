@@ -10,7 +10,7 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve(__dirname, '../public'),
+    path: path.resolve(__dirname, '../public/build'),
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -18,6 +18,7 @@ module.exports = {
   devServer: {
     publicPath: '/',
     contentBase: path.join(__dirname, '../public'),
+    historyApiFallback: true,
     hot: true
   },
 

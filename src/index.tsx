@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './stylesheets/main.scss';
 
@@ -8,7 +9,9 @@ const rootElement = document.getElementById('root') as HTMLElement;
 
 ReactDOM.render(
   <AppContainer>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </AppContainer>,
   rootElement
 );
@@ -18,7 +21,9 @@ if (module.hot) {
     const NextApp = require<RequireImport>("./App").default;
     ReactDOM.render(
       <AppContainer>
-        <NextApp />
+        <BrowserRouter>
+          <NextApp />
+        </BrowserRouter>
       </AppContainer>
       ,
       rootElement

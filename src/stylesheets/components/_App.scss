@@ -1,0 +1,23 @@
+.App {
+  display: grid;
+  grid-column-gap: $grid-column-gap-960;
+  grid-template-columns: 1fr $aside-width-960 $main-width-960 1fr;
+  grid-template-rows: [first header-start] $header-height-960 [header-end content-start] 1fr [content-end footer-start] min-content [footer-end last];
+  min-height: 100vh;
+  position: relative;
+}
+
+.App__Background {
+  align-self: end;
+  background: $color-background-primary;
+  background: linear-gradient($color-background-primary, $color-background-secondary);
+  grid-column: 1 / 5;
+  grid-row: first / span last;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: $background-z-index;
+}

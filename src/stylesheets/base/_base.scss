@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: $color-background-primary;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: $color-text;
+  font-family: $font-family-text;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-regular;
+  line-height: 1.4;
+  min-height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: $accent-3;
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  color: $accent-1;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-demi-bold;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: $color-text;
+}
+
+a:hover {
+  color: $accent-1;
+}

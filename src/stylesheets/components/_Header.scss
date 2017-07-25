@@ -1,0 +1,97 @@
+.Header {
+  align-self: end;
+  grid-column: 2 / 4;
+  grid-row: auto;
+  margin-bottom: $header-margin-960;
+}
+
+.Header__Bar {
+  background: $accent-1;
+  box-shadow: 0px 0px 4px $accent-1;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  height: 2px;
+  width: 100%;
+}
+
+.Header__Home {
+  display: block;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.Header__Home:hover {
+  color: $color-text;
+}
+
+.Header__HomeContainer {
+  border: 4px;
+  border-color: $accent-3;
+  border-style: solid;
+  box-shadow: inset 0px 0px 4px $accent-3, 0px 0px 4px $accent-3;
+  display: grid;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  position: relative;
+  width: 100%;
+}
+
+.Header__Home--Active {
+  color: $color-text;
+}
+
+.Header__HomeHalo {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large;
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.7;
+  width: 100%;
+}
+
+.Header__HomeHalo--1 {
+  color: $accent-2;
+  left: 3px;
+  z-index: $home-halo-1-z-index;
+}
+
+.Header__HomeHalo--2 {
+  color: $accent-3;
+  left: -1.5px;
+  z-index: $home-halo-2-z-index;
+}
+
+.Header__Nav {
+  align-items: end;
+  display: grid;
+  grid-template-columns: $aside-width-960 1fr;
+  grid-template-rows: auto min-content;
+  grid-column-gap: $grid-column-gap-960;
+  justify-items: center;
+  list-style: none;
+}
+
+.Header__NavItem {
+  color: $accent-1;
+  font-weight: $font-weight-demi-bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px $accent-1;
+}
+
+.Header__NavItemContainer {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

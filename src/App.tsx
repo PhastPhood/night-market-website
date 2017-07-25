@@ -6,9 +6,10 @@ import Main from './components/Main';
 export default class App extends React.Component<{}, {}> {
   render() {
     return (
-      <div>
-        <Header />
+      <div className="App">
+        <Header/>
         <Main />
+        <div className="App__Background"/>
       </div>
     );
   }

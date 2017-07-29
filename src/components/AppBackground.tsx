@@ -50,16 +50,20 @@ export default class AppBackground extends React.Component<any, AppBackgroundSta
     const viewHeight = Math.max(html.clientHeight, window.innerHeight || 0);
     const bottomOffset = body.scrollTop + viewHeight;
 
-    const weightTop = body.scrollTop/documentHeight * 0.8;
-    let weightBottom = this.bottomCurveFunction(bottomOffset/documentHeight);
+    const weightTop = this.gradientTopFunction(body.scrollTop/documentHeight);
+    let weightBottom = this.gradientBottomFunction(bottomOffset/documentHeight);
     console.log(body.scrollTop);
 
     this.setState({weightTop: weightTop,
         weightBottom: weightBottom});
   }
 
-  bottomCurveFunction(x:number) {
-    return 0.8/(1 + Math.exp(-8 * (x - 0.5))) + 0.2;
+  gradientTopFunction(x:number) {
+    return 1/(1 + Math.exp(-8 * (x - 0.6)));
+  }
+
+  gradientBottomFunction(x:number) {
+    return 0.7/(1 + Math.exp(-8 * (x - 0.5))) + 0.3;
   }
 
   render() {

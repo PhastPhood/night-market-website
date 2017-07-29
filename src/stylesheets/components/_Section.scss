@@ -2,6 +2,7 @@
   border-bottom: $section-border solid $color-section-secondary;
   border-top: $section-border solid $color-section-primary;
   margin-bottom: 32px;
+  max-width: $main-width-960;
   mix-blend-mode: screen;
   padding: $section-padding-vertical $section-padding-horizontal $section-padding-vertical $section-padding-horizontal;
   position: relative;

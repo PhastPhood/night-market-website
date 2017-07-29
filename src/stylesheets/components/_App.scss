@@ -1,10 +1,9 @@
 .App {
-  display: grid;
-  grid-column-gap: $grid-column-gap-960;
-  grid-template-columns: 1fr $aside-width-960 $main-width-960 1fr;
-  grid-template-rows: [first header-start] $header-height-960 [header-end content-start] 1fr [content-end footer-start] min-content [footer-end last];
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: $main-width-960 + $aside-width-960 + $column-gap-960;
   min-height: 100vh;
   position: relative;
-  padding-left: 34px;
-  width: calc(100vw - 34px);
+  margin: 0 auto;
 }

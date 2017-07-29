@@ -1,15 +1,11 @@
 .Header {
-  align-self: end;
-  grid-column: 2 / 4;
-  grid-row: auto;
-  margin-bottom: $header-margin-960;
+  margin-bottom: $header-margin-bottom-960;
+  margin-top: $header-margin-top-960;
 }
 
 .Header__Bar {
   background: $accent-1;
   box-shadow: 0px 0px 4px $accent-1;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
   height: 2px;
   width: 100%;
 }
@@ -18,8 +14,6 @@
   display: block;
   font-weight: $font-weight-bold;
   font-size: $font-size-large;
-  grid-column: 1;
-  grid-row: 1;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -34,25 +28,22 @@
   border-color: $accent-3;
   border-style: solid;
   box-shadow: inset 0px 0px 4px $accent-3, 0px 0px 4px $accent-3;
-  display: grid;
-  grid-column: 1;
-  grid-row: 1 / 3;
+  box-sizing: border-box;
+  flex: 0 0 $aside-width-960;
+  margin-right: $column-gap-960;
   position: relative;
-  width: 100%;
 }
 
 .Header__Home--Active {
-  color: $color-text;
+  pointer-events: none;
 }
 
 .Header__HomeHalo {
   aria-hidden: true;
   font-weight: $font-weight-bold;
   font-size: $font-size-large;
-  grid-column: 1;
-  grid-row: 1;
   opacity: 0.7;
-  position: relative;
+  position: absolute;
   pointer-events: none;
   text-align: center;
   text-decoration: none;
@@ -74,13 +65,10 @@
 }
 
 .Header__Nav {
-  align-items: end;
-  display: grid;
-  grid-template-columns: $aside-width-960 1fr;
-  grid-template-rows: auto 8px;
-  grid-column-gap: $grid-column-gap-960;
-  justify-items: center;
-  list-style: none;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .Header__NavLinkContainer {
@@ -88,4 +76,11 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.Header__NavLinkOuterContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 $main-width-960;
+  flex-direction: column;
 }

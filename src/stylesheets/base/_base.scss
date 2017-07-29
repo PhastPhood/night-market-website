@@ -12,6 +12,7 @@ body {
   font-weight: $font-weight-regular;
   line-height: 1.4;
   min-height: 100%;
+  overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,7 +30,7 @@ h2 {
 }
 
 p {
-  margin-top: 1em;
+  margin-top: 0.5em;
   margin-bottom: 1em;
 }
 

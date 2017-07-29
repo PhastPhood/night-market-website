@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import AppBackgroundContainer from './components/AppBackgroundContainer';
 import Header from './components/Header';
 import Main from './components/Main';
 
@@ -9,7 +10,7 @@ export default class App extends React.Component<{}, {}> {
       <div className="App">
         <Header/>
         <Main />
-        <div className="App__Background"/>
+        <AppBackgroundContainer/>
       </div>
     );
   }

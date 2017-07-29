@@ -1,0 +1,51 @@
+.WorkExperience {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.WorkExperience__Bullet {
+  position: relative;
+  text-indent: 1.1em;
+}
+
+.WorkExperience__Bullet:before {
+  color: $accent-1;
+  content: "\2219";
+  font-size: 3em;
+  left: -0.36em;
+  line-height: 0;
+  position: absolute;
+  top: .18em;
+}
+
+.WorkExperience__BulletList {
+  margin-top: 5px;
+  position: relative;
+}
+
+.WorkExperience__Date {
+  align-self: flex-end;
+  margin: auto;
+}
+
+.WorkExperience__DateContainer {
+  display: inline-block;
+}
+
+.WorkExperience__Name {
+  white-space: nowrap;
+}
+
+.WorkExperience__NameContainer {
+  flex: 1;
+}
+
+.WorkExperience__Title {
+  flex: 1 100%;
+  margin-top: 5px;
+}
+
+.WorkExperience__Team {
+  color: $accent-3;
+}

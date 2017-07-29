@@ -1,5 +1,7 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
+import HeaderLink from './HeaderLink';
 
 export default function Header() {
   return (
@@ -8,12 +10,12 @@ export default function Header() {
         <div className="Header__HomeContainer">
           <span className="Header__HomeHalo Header__HomeHalo--1">Jeff Gao</span>
           <span className="Header__HomeHalo Header__HomeHalo--2">Jeff Gao</span>
-          <Link className="Header__Home" to='/'>Jeff Gao</Link>
+          <NavLink className="Header__Home" to='/'>Jeff Gao</NavLink>
         </div>
-        <div className="Header__NavItemContainer">
-          <Link className="Header__NavItem" to='/work'>Work</Link>
-          <Link className="Header__NavItem" to='/design'>Design</Link>
-          <Link className="Header__NavItem" to='/cooking'>Contact</Link>
+        <div className="Header__NavLinkContainer">
+          <HeaderLink to='/work'>Work</HeaderLink>
+          <HeaderLink to='/design'>Design</HeaderLink>
+          <HeaderLink to='/cooking'>Contact</HeaderLink>
         </div>
         <div className="Header__Bar"/>
       </nav>

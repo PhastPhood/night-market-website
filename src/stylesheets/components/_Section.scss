@@ -1,0 +1,27 @@
+.Section {
+  border-bottom: $section-border solid $color-section-secondary;
+  border-top: $section-border solid $color-section-primary;
+  margin-bottom: 32px;
+  mix-blend-mode: screen;
+  padding: $section-padding-vertical $section-padding-horizontal $section-padding-vertical $section-padding-horizontal;
+  position: relative;
+}
+
+.Section:before,
+.Section:after {
+  background: linear-gradient($color-section-primary, $color-section-secondary);
+  bottom: -$section-border;
+  content: "";
+  mix-blend-mode: screen;
+  position: absolute;
+  top: -$section-border;
+  width: $section-border;
+}
+
+.Section:after {
+  left: -$section-border;
+}
+
+.Section:before {
+  right: -$section-border;
+}

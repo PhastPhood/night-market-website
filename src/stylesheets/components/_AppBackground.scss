@@ -1,0 +1,9 @@
+.AppBackground {
+  background: $color-background-primary;
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  bottom: 0px;
+  width: 100%;
+  z-index: $background-z-index;
+}

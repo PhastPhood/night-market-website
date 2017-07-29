@@ -1,0 +1,45 @@
+.HeaderLink {
+  position: relative;
+}
+
+.HeaderLink__Overlay,
+.HeaderLink__Overlay--Active {
+  color: $color-text;
+  font-weight: $font-weight-demi-bold;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px $accent-1;
+  text-transform: uppercase;
+}
+
+.HeaderLink__Base {
+  aria-hidden: true;
+  color: $accent-1;
+  font-weight: $font-weight-demi-bold;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  text-shadow: 0px 0px 1px $accent-1;
+  text-transform: uppercase;
+  user-select: none;
+  z-index: $header-link-z-index-1;
+}
+
+.HeaderLink__Overlay {
+  opacity: 0;
+}
+
+.HeaderLink__Overlay:hover {
+  color: $color-text;
+  opacity: 0.6;
+}
+
+.HeaderLink__Overlay--Active {
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.HeaderLink__Overlay--Active:hover {
+  color: $color-text;
+  opacity: 0.85;
+}
+

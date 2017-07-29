@@ -4,11 +4,20 @@ $palette-yellow: #ffd551;
 $palette-red: #d53b55;
 $palette-blue: #bfbff5;
 
-$palette-gradient-blue: #0e1839;
-$palette-gradient-purple: #3a114c;
+$palette-gradient-blue: rgb(17, 13, 57);
+$palette-gradient-purple: rgb(54, 16, 73);
+
+$palette-gradient-white-1: rgba(191, 191, 245, 0.2);
+$palette-gradient-white-2: rgba(191, 191, 245, 0.4);
+$palette-white-no-alpha: rgba(191, 191, 245, 0);
 
 $color-background-primary: $palette-gradient-blue;
 $color-background-secondary: $palette-gradient-purple;
+
+$color-section-primary: $palette-gradient-white-1;
+$color-section-secondary: $palette-gradient-white-2;
+$color-section-none: $palette-white-no-alpha;
+
 $color-text: $palette-white;
 
 $accent-1: $palette-yellow;

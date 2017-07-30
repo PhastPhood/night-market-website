@@ -59,7 +59,7 @@ export default class AppBackground extends React.Component<any, AppBackgroundSta
   }
 
   gradientTopFunction(x:number) {
-    return 1/(1 + Math.exp(-8 * (x - 0.6)));
+    return 0.8/(1 + Math.exp(-8 * (x - 0.6)));
   }
 
   gradientBottomFunction(x:number) {

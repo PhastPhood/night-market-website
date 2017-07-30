@@ -31,19 +31,21 @@
 
 .WorkExperience__DateContainer {
   display: inline-block;
+  margin-bottom: 5px;
 }
 
 .WorkExperience__Name {
+  margin-right: 12px;
   white-space: nowrap;
 }
 
 .WorkExperience__NameContainer {
   flex: 1;
+  margin-bottom: 5px;
 }
 
 .WorkExperience__Title {
   flex: 1 100%;
-  margin-top: 5px;
 }
 
 .WorkExperience__Team {

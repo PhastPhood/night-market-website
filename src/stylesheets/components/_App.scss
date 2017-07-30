@@ -1,9 +1,15 @@
 .App {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: $main-width-960 + $aside-width-960 + $column-gap-960;
-  min-height: 100vh;
-  position: relative;
   margin: 0 auto;
+  max-width: $main-width-large + $aside-width-large + $column-gap-large;
+  min-height: 100vh;
+  padding-left: $column-gap-large;
+  padding-right: $column-gap-large;
+  position: relative;
+
+  @media screen and (max-width: $break-small) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

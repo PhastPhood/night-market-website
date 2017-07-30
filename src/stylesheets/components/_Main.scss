@@ -1,4 +1,26 @@
 .Main {
-  align-self: flex-end;
-  width: $main-width-960;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Main__Spacer {
+  margin-right: $column-gap-large;
+  width: $aside-width-large;
+
+  @media screen and (max-width: $break-large) {
+    margin-right: 0;
+    width: 0;
+  }
+}
+
+.Main__Content {
+  flex: 0 1 $main-width-large;
+
+  @media screen and (max-width: $break-small) {
+    margin-left: $main-margin-small;
+    margin-right: $main-margin-small;
+  }
 }

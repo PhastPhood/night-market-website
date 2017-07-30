@@ -1,19 +1,24 @@
 .Header {
-  margin-bottom: $header-margin-bottom-960;
-  margin-top: $header-margin-top-960;
+  margin-bottom: $header-margin-bottom-large;
+  margin-top: $header-margin-top-large;
+  @media screen and (max-width: $break-small) {
+    margin-bottom: $header-margin-bottom-small;
+    margin-top: $header-margin-top-small;
+  }
 }
 
 .Header__Bar {
   background: $accent-1;
   box-shadow: 0px 0px 4px $accent-1;
   height: 2px;
+  margin-top: 5px;
   width: 100%;
 }
 
 .Header__Home {
   display: block;
-  font-weight: $font-weight-bold;
   font-size: $font-size-large;
+  font-weight: $font-weight-bold;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -29,9 +34,17 @@
   border-style: solid;
   box-shadow: inset 0px 0px 4px $accent-3, 0px 0px 4px $accent-3;
   box-sizing: border-box;
-  flex: 0 0 $aside-width-960;
-  margin-right: $column-gap-960;
+  flex: 0 1 $aside-width-large;
+  margin-right: $column-gap-large;
   position: relative;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-large) {
+    margin-left: $column-gap-large;
+  }
+
+  @media screen and (max-width: $break-small) {
+    margin-right: 0;
+  }
 }
 
 .Header__Home--Active {
@@ -40,11 +53,11 @@
 
 .Header__HomeHalo {
   aria-hidden: true;
-  font-weight: $font-weight-bold;
   font-size: $font-size-large;
+  font-weight: $font-weight-bold;
   opacity: 0.7;
-  position: absolute;
   pointer-events: none;
+  position: absolute;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -68,11 +81,11 @@
   align-items: flex-end;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .Header__NavLinkContainer {
-  align-items: baseline;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -81,6 +94,7 @@
 .Header__NavLinkOuterContainer {
   box-sizing: border-box;
   display: flex;
-  flex: 0 0 $main-width-960;
+  flex: 0 1 $main-width-large;
   flex-direction: column;
+  margin-top: $header-navlink-margin-top-large;
 }

@@ -1,10 +1,19 @@
-$column-gap-960: 48px;
-$aside-width-960: 192px;
-$main-width-960: 512px;
+$column-gap-large: 48px;
+$aside-width-large: 192px;
+$main-width-large: 512px;
 
-$header-margin-top-960: 64px;
-$header-margin-bottom-960: 48px;
+$header-margin-top-large: 64px;
+$header-margin-bottom-large: 48px;
+$header-navlink-margin-top-large: 16px;
+
+$header-margin-top-small: 16px;
+$header-margin-bottom-small: 24px;
 
 $section-padding-vertical: 16px;
 $section-padding-horizontal: 24px;
 $section-border: 1px;
+
+$main-margin-small: 16px;
+
+$break-large: $main-width-large + $aside-width-large + 3 * $column-gap-large;
+$break-small: $main-width-large + 2 * $column-gap-large;

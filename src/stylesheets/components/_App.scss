@@ -1,11 +1,11 @@
-.App {
+.App__Content {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: $main-width-large + $aside-width-large + $column-gap-large;
   min-height: 100vh;
-  padding-left: $column-gap-large;
-  padding-right: $column-gap-large;
+  padding-left: $column-gap-large - $scrollbar-fix-width / 2;
+  padding-right: $column-gap-large - $scrollbar-fix-width / 2;
   position: relative;
 
   @media screen and (max-width: $break-small) {

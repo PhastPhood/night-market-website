@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as _ from 'lodash';
+import {throttle} from 'lodash';
 import {Action, Location} from 'history';
 import {RouteComponentProps} from 'react-router';
 
@@ -19,13 +19,14 @@ export default class AppBackground extends React.Component<any, AppBackgroundSta
       weightBottom: 1
     };
 
-    this.updatePositions = _.throttle(this.updatePositions.bind(this), 10);
+    this.updatePositions = throttle(this.updatePositions.bind(this), 10);
   }
 
-  unlisten() {}
+  unlisten() {
+
+  }
 
   componentDidMount() {
-    window.onhashchange = function() {console.log('hashchange')};
     window.addEventListener('onresize', this.updatePositions);
     window.addEventListener('scroll', this.updatePositions);
     this.unlisten = this.props.history.listen((location:Location, action:Action) => setTimeout(function(){
@@ -50,19 +51,18 @@ export default class AppBackground extends React.Component<any, AppBackgroundSta
     const viewHeight = Math.max(html.clientHeight, window.innerHeight || 0);
     const bottomOffset = body.scrollTop + viewHeight;
 
-    const weightTop = this.gradientTopFunction(body.scrollTop/documentHeight);
-    let weightBottom = this.gradientBottomFunction(bottomOffset/documentHeight);
-    console.log(body.scrollTop);
+    const weightTop = this.getGradientWeightTop(body.scrollTop/documentHeight);
+    let weightBottom = this.getGradientWeightBottom(bottomOffset/documentHeight);
 
     this.setState({weightTop: weightTop,
         weightBottom: weightBottom});
   }
 
-  gradientTopFunction(x:number) {
+  getGradientWeightTop(x:number) {
     return 0.8/(1 + Math.exp(-8 * (x - 0.6)));
   }
 
-  gradientBottomFunction(x:number) {
+  getGradientWeightBottom(x:number) {
     return 0.7/(1 + Math.exp(-8 * (x - 0.5))) + 0.3;
   }
 

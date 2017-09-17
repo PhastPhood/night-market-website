@@ -13,8 +13,14 @@ body {
   line-height: 1.4;
   min-height: 100%;
   overflow-x: hidden;
+  padding-left: $scrollbar-fix-width / 2;
+  width: calc(100vw - #{$scrollbar-fix-width});
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  @media screen and (max-width: $break-small) {
+    padding-left: 0px;
+    width: 100%;
+  }
 }
 
 h1 {
